@@ -3,8 +3,8 @@ services:
   - docker
 
 before_install: 
-  - docker build -t Rim1980/docker-react -f Dockerfile.dev .
+  - docker build -t rim1980/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run Rim1980/docker-react npm run test -- --coverage
+  - docker run rim1980/docker-react npm run test -- --coverage
    
