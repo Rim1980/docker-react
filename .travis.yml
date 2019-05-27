@@ -5,6 +5,8 @@ services:
 before_install: 
   - docker build -t rim1980/docker-react -f Dockerfile.dev .
 
+script:
+  - docker run rim1980/docker-react npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
